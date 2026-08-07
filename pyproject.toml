@@ -1,0 +1,40 @@
+[project]
+name = "pytest-easy"
+version = "0.0.1"
+description = "Pytest, but made easy"
+authors = [
+    {name = "danialcala94",email = "danielalcalavalera@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8,<3.14"
+
+[project.urls]
+Homepage = "https://github.com/Implosiv3/pytest-easy"
+Issues = "https://github.com/Implosiv3/pytest-easy/issues"
+
+[tool.poetry.dependencies]
+# Mandatory
+printer-easy = { version = ">=0.0.2,<1.0.0", optional = false }
+pystandards = { version = ">=0.0.17,<1.0.0", optional = false }
+httpx = { version = ">=0.28.1,<9999.0.0", optional = false }
+aiofiles = { version = ">=24.1.0,<9999.0.0", optional = false}
+python-dotenv = { version = ">=1.0.1,<9999.0.0", optional = false }
+psutil = { version = ">=7.2.2,<9999.0.0", optional = false }
+# Optional
+
+[tool.poetry]
+packages = [{include = "pytest_easy", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = { version = "^8.3.5", optional = false }
+pytest-asyncio = { version = ">=0.24.0", optional = false }
+
+[tool.pytest.ini_options]
+markers = [
+    "mandatory: mandatory tests for release",
+    "additional: exhaustive and demanding tests"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
