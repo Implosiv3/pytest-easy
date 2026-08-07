@@ -17,11 +17,34 @@ You should tests always the `mandatory` to know that your app base code is still
 # Usage
 The `tests` folder will be your new friend. Keep a `test_general.py` to always do a simple test. Have the `conftest.py` to configure what has to be done before and after the tests are running.
 
+Some code to apply in your tests:
+
+1. Test that an exception is raised with a specific message.
+```
+from pytest_easy import assert_exception_is_raised
+
+assert_exception_is_raised(lambda: 1 / 0, exception_type = None, message = 'division by zero')
+```
+
+2. Compare float values
+```
+from pytest_easy import float_approx_to_compare
+
+assert 3.99 == float_approx_to_compare(3.99)
+```
+
+3. Check that a dependency is not installed
+```
+from pytest_easy import is_dependency_installed
+
+assert not is_dependency_installed('opencv-python')
+```
+
+Check `test_various.py` to see more examples.
+
 This will execute the tests and remove all the new files in the `test_files` folder that were not before the tests were executed, or you can simply comment the `test_files_handler.delete_new_files()` line before running them, so the generated files are not removed in that execution, uncomment it, and they won't be removed in the next execution because they were already there.
 
 There are some `.bat` files included to run the tests in 3 different modes:
 1. `run_tests.bat` - Non-isolated mode, normal mode.
 2. `run_tests_isolated.bat` - Isolated mode, our way.
 3. `run_mandatory_tests.bat` - Run only the tests with the `@mandatory` pytest mark.
-
-Check `test_various.py` to see more examples.

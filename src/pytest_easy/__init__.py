@@ -207,7 +207,7 @@ def is_dependency_installed(
     - `cv2` must be used and not `opencv-python`
 
     Note for developer: This method is duplicated
-    somwhere (ask developer) but copied here to avoid
+    somwehere (ask developer) but copied here to avoid
     imports as this library is just for testing and we
     don't want dependencies.
     """
@@ -231,7 +231,7 @@ def execute_if_dependency_installed(
     - `cv2` must be used and not `opencv-python`
 
     Note for developer: This method is duplicated
-    somwhere (ask developer) but copied here to avoid
+    somewhere (ask developer) but copied here to avoid
     imports as this library is just for testing and we
     don't want dependencies.
     """

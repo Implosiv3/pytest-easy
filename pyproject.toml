@@ -1,6 +1,6 @@
 [project]
 name = "pytest-easy"
-version = "0.0.4"
+version = "0.0.5"
 description = "Pytest, but made easy"
 authors = [
     {name = "danialcala94",email = "danielalcalavalera@gmail.com"}
