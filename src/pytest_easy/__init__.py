@@ -180,9 +180,6 @@ def assert_optional_library_is_missing(
     only if that library is not actually
     installed, and will do nothing if it is
     installed.
-
-    This is to test the OptionalClass we use
-    from 'yta_programming'.
     """
     import importlib
     
@@ -191,7 +188,7 @@ def assert_optional_library_is_missing(
     if not is_library_installed:
         assert_exception_is_raised(
             function = function,
-            # message = f'The class "yta_youtube_api.YoutubeAPI" needs the "{library_name}" installed. You can install it with this command: pip install yta_youtube[{library_name}]'
+            # message = f'The class "library.YoutubeAPI" needs the "{library_name}" installed. You can install it with this command: pip install library[{library_name}]'
             message = f'needs the "{library_name}" installed. You can install it with this command: pip install'
         )
         
@@ -209,8 +206,8 @@ def is_dependency_installed(
     - `PIL` must be used and not `pillow`
     - `cv2` must be used and not `opencv-python`
 
-    Note for developer: This method is duplicated in the
-    `yta_programming` library but copied here to avoid
+    Note for developer: This method is duplicated
+    somwhere (ask developer) but copied here to avoid
     imports as this library is just for testing and we
     don't want dependencies.
     """
@@ -233,8 +230,8 @@ def execute_if_dependency_installed(
     - `PIL` must be used and not `pillow`
     - `cv2` must be used and not `opencv-python`
 
-    Note for developer: This method is duplicated in the
-    `yta_programming` library but copied here to avoid
+    Note for developer: This method is duplicated
+    somwhere (ask developer) but copied here to avoid
     imports as this library is just for testing and we
     don't want dependencies.
     """
@@ -314,28 +311,29 @@ def assert_images_are_identical(
     filename_two: str
 ):
     """
+    *Optional dependency `numpy` (imported as `numpy`) required*
+        
+    *Optional dependency `pillow` (imported as `PIL`) required*
+
     Check that the `filename_one` and the `filename_two`
     are 2 identical images by reading them as numpy
     arrays.
     """
-    if not is_dependency_installed('yta_numpy'):
-        raise Exception('The "yta_numpy" optional library is needed to use this "assert_images_are_identical" functionality. You can install it with this command: pip install yta_testing[yta_numpy]')
+    if not is_dependency_installed('numpy'):
+        raise Exception('The "numpy" optional library is needed to use this "assert_images_are_identical" functionality. You can install it with this command: pip install pytest_easy[numpy]')
+
+    if not is_dependency_installed('PIL'):
+        raise Exception('The "PIL" optional library is needed to use this "assert_images_are_identical" functionality. You can install it with this command: pip install pytest_easy[pillow]')
+
+    from pytest_easy._utils import read_image_as_numpy
+    import numpy as np
+
+    assert np.array_equal(
+        a1 = read_image_as_numpy(filename_one),
+        a2 = read_image_as_numpy(filename_two)
+    )
+
     
-    assert True
-
-    """
-    TODO: Temporarily avoiding the use of 'yta_numpy' to
-    solve a problem with the python version.
-    """
-    # from yta_numpy.utils import read_image_as_numpy
-
-    # import numpy as np
-    
-    # assert np.array_equal(
-    #     a1 = read_image_as_numpy(filename_one),
-    #     a2 = read_image_as_numpy(filename_two)
-    # )
-
 def does_file_exist(
     filename: str,
     do_check_is_not_0b: bool = True

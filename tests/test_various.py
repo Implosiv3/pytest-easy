@@ -52,10 +52,10 @@ async def test_various():
 
     assert get_22() == True
 
-    assert_exception_is_raised(
-        function = lambda: assert_images_are_identical('test', 'test'),
-        message = 'The "yta_numpy" optional library is needed to use this "assert_images_are_identical" functionality. You can install it with this command: pip install yta_testing[yta_numpy]'
-    )
+    # assert_exception_is_raised(
+    #     function = lambda: assert_images_are_identical('test', 'test'),
+    #     message = 'The "numpy" optional library is needed to use this "assert_images_are_identical" functionality. You can install it with this command: pip install pytest_easy[numpy]'
+    # )
 
     # Asynchronous
     class CustomAsyncError(Exception):

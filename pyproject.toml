@@ -1,6 +1,6 @@
 [project]
 name = "pytest-easy"
-version = "0.0.2"
+version = "0.0.3"
 description = "Pytest, but made easy"
 authors = [
     {name = "danialcala94",email = "danielalcalavalera@gmail.com"}
@@ -21,6 +21,13 @@ psutil = { version = ">=7.2.2,<9999.0.0", optional = false }
 
 [tool.poetry]
 packages = [{include = "pytest_easy", from = "src"}]
+
+[tool.poetry.group.optional]
+optional = true
+
+[tool.poetry.group.optional.dependencies]
+numpy = { version = ">=0.0.1,<9999.0.0", optional = false }
+pillow = { version = ">=0.0.1,<9999.0.0", optional = false }
 
 [tool.poetry.group.dev.dependencies]
 pytest = { version = "^8.3.5", optional = false }
