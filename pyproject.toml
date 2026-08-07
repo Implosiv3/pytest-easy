@@ -1,6 +1,6 @@
 [project]
 name = "pytest-easy"
-version = "0.0.1"
+version = "0.0.2"
 description = "Pytest, but made easy"
 authors = [
     {name = "danialcala94",email = "danielalcalavalera@gmail.com"}
@@ -15,9 +15,6 @@ Issues = "https://github.com/Implosiv3/pytest-easy/issues"
 [tool.poetry.dependencies]
 # Mandatory
 printer-easy = { version = ">=0.0.2,<1.0.0", optional = false }
-pystandards = { version = ">=0.0.17,<1.0.0", optional = false }
-httpx = { version = ">=0.28.1,<9999.0.0", optional = false }
-aiofiles = { version = ">=24.1.0,<9999.0.0", optional = false}
 python-dotenv = { version = ">=1.0.1,<9999.0.0", optional = false }
 psutil = { version = ">=7.2.2,<9999.0.0", optional = false }
 # Optional

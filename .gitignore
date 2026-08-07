@@ -7,3 +7,6 @@ settings.json
 settings.json
 .env*
 !.env.example
+test_files/*
+!test_files/test.txt
+!test_files/tests.log

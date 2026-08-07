@@ -64,3 +64,124 @@ tests/test_various.py::test_various
 -- Total --
 [TIME] 00:00s
 [GC OBJECTS]: 36883
+
+tests/test_general.py::test_mandatory
+-- Before --
+[MEM] 33.83 MB
+[MEM PYTHON] 0.01 MB
+-- After --
+[MEM ] 33.85 MB
+[MEM PYTHON] 0.02 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 36698
+
+tests/test_various.py::test_various
+-- Before --
+[MEM] 34.80 MB
+[MEM PYTHON] 0.07 MB
+-- After --
+[MEM ] 34.91 MB
+[MEM PYTHON] 0.12 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 36875
+
+tests/test_general.py::test_mandatory
+-- Before --
+[MEM] 32.64 MB
+[MEM PYTHON] 0.01 MB
+-- After --
+[MEM ] 32.65 MB
+[MEM PYTHON] 0.01 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 33906
+
+tests/test_general.py::test_additional
+-- Before --
+[MEM] 33.18 MB
+[MEM PYTHON] 0.03 MB
+-- After --
+[MEM ] 33.18 MB
+[MEM PYTHON] 0.03 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 33921
+
+tests/test_various.py::test_various
+-- Before --
+[MEM] 33.32 MB
+[MEM PYTHON] 0.07 MB
+-- After --
+[MEM ] 33.51 MB
+[MEM PYTHON] 0.12 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 34093
+
+tests/test_general.py::test_mandatory
+-- Before --
+[MEM] 32.64 MB
+[MEM PYTHON] 0.01 MB
+-- After --
+[MEM ] 32.65 MB
+[MEM PYTHON] 0.01 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 33903
+
+tests/test_general.py::test_additional
+-- Before --
+[MEM] 33.18 MB
+[MEM PYTHON] 0.03 MB
+-- After --
+[MEM ] 33.18 MB
+[MEM PYTHON] 0.03 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 33918
+
+tests/test_various.py::test_various
+-- Before --
+[MEM] 33.32 MB
+[MEM PYTHON] 0.07 MB
+-- After --
+[MEM ] 33.41 MB
+[MEM PYTHON] 0.12 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 34090
+
+tests/test_general.py::test_mandatory
+-- Before --
+[MEM] 32.73 MB
+[MEM PYTHON] 0.01 MB
+-- After --
+[MEM ] 32.73 MB
+[MEM PYTHON] 0.01 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 33897
+
+tests/test_general.py::test_additional
+-- Before --
+[MEM] 33.32 MB
+[MEM PYTHON] 0.03 MB
+-- After --
+[MEM ] 33.32 MB
+[MEM PYTHON] 0.03 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 33912
+
+tests/test_various.py::test_various
+-- Before --
+[MEM] 33.47 MB
+[MEM PYTHON] 0.07 MB
+-- After --
+[MEM ] 33.56 MB
+[MEM PYTHON] 0.12 MB
+-- Total --
+[TIME] 00:00s
+[GC OBJECTS]: 34084
