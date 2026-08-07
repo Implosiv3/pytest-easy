@@ -1,6 +1,6 @@
 [project]
 name = "pytest-easy"
-version = "0.0.3"
+version = "0.0.4"
 description = "Pytest, but made easy"
 authors = [
     {name = "danialcala94",email = "danielalcalavalera@gmail.com"}
@@ -38,6 +38,11 @@ markers = [
     "mandatory: mandatory tests for release",
     "additional: exhaustive and demanding tests"
 ]
+asyncio_default_fixture_loop_scope = 'function'
+
+[tool.poetry.scripts]
+pytest-easy-run-tests-isolated = "pytest_easy.cli.isolated_tests_runner:main"
+pytest-easy-init-log-file = "pytest_easy.cli.init_log:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

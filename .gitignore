@@ -3,6 +3,9 @@ dist/*
 pytest_easy.egg-info/*
 __pycache__
 *.bat
+!run_mandatory_tests.bat
+!run_tests.bat
+!run_tests_isolated.bat
 settings.json
 settings.json
 .env*

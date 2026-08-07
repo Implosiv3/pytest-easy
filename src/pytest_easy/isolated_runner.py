@@ -5,6 +5,8 @@ dealing with libraries like 'numpy' or 'moderngl'
 that need a lot of real memory and is not able to
 free it within the same process.
 """
+from printer_easy import _print_color
+
 import subprocess
 import sys
 
@@ -54,7 +56,7 @@ def run_test(
 
     return result.returncode
 
-# We keep it here to avoid the 'yta-logger' import
+
 def _print_red(
     message: str
 ) -> None:
@@ -63,7 +65,8 @@ def _print_red(
 
     Print a message in console in red color.
     """
-    print(f'\033[31m{message}\033[0m')
+    return _print_color(message, '31')
+
 
 def _print_green(
     message: str
@@ -73,4 +76,4 @@ def _print_green(
 
     Print a message in console in green color.
     """
-    print(f'\033[32m{message}\033[0m')
+    return _print_color(message, '32')
